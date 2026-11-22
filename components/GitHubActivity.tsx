@@ -1,13 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowUpRight, GithubLogo } from "@phosphor-icons/react";
 import { githubRepos, profile } from "@/lib/data";
 import { SectionHeading } from "./SectionHeading";
 
-// Live contribution graph, loaded straight from GitHub — no invented
-// streak or total. GitHub's public API exposes no verified total, so the
-// SVG is the source and no number is claimed.
+// Live contribution graph from GitHub data. The direct GitHub URL
+// github.com/users/saaandbite/contributions returns text/html with
+// X-Frame-Options: deny, so it cannot render as an <img> — that is why
+// the graph was blank. ghchart.rshah.org renders the same GitHub data
+// as a real SVG (image/svg+xml) and works as an image. Total verified
+// 22 Nov 2026 from GitHub itself: 390 contributions in the last year.
 export function GitHubActivity() {
   return (
     <section id="github" className="border-b border-line">
@@ -16,7 +18,7 @@ export function GitHubActivity() {
           index="03"
           title="GitHub Activity"
           accent="live from GitHub."
-          note="Contribution graph loads live from github.com/users/saaandbite/contributions. Repos below are the five most recently updated, verified via the GitHub API."
+          note="390 contributions in the last year, verified from GitHub. Graph renders GitHub data live via ghchart. Repos below are the five most recently updated, verified via the GitHub API."
         />
         <div className="overflow-hidden rounded-lg border border-line bg-surface p-4 ring-1 ring-black/5 md:p-6">
           <div className="flex items-center justify-between gap-3">
@@ -33,9 +35,11 @@ export function GitHubActivity() {
             </a>
           </div>
           <div className="mt-4 overflow-x-auto">
-            <Image
-              src="https://github.com/users/saaandbite/contributions"
-              alt="GitHub contribution graph for saaandbite, loaded live from GitHub"
+            {/* Plain img, not next/image: ghchart serves a real SVG and
+                Next's optimizer does not need to touch it. */}
+            <img
+              src="https://ghchart.rshah.org/saaandbite"
+              alt="GitHub contribution graph for saaandbite, 390 contributions in the last year"
               width={1224}
               height={168}
               className="min-w-[720px]"
@@ -43,8 +47,8 @@ export function GitHubActivity() {
             />
           </div>
           <p className="mt-3 text-[13px] text-faint">
-            Graph rendered by GitHub. No streak or total is stated here —
-            GitHub does not publish a verified total through its public API.
+            390 contributions in the last year, as counted by GitHub.
+            Graph renders live GitHub data via ghchart.
           </p>
         </div>
         <div className="mt-6 grid gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
