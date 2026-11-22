@@ -1,3 +1,11 @@
+"use client";
+
+import { WordReveal } from "./motion/WordReveal";
+
+// Section heading — title and italic accent now reveal word by word,
+// blur-in on scroll enter (WordReveal), instead of appearing instantly.
+// The mono [index] label and the note stay static so the heading motion
+// reads clearly.
 export function SectionHeading({
   index,
   title,
@@ -15,10 +23,10 @@ export function SectionHeading({
         <b className="font-semibold text-accent-dark">[{index}]</b> {title}
       </p>
       <h2 className="mt-3 max-w-2xl text-balance text-[clamp(28px,4vw,40px)] font-extrabold leading-[1.05] tracking-[-0.03em] text-ink">
-        {title}{" "}
+        <WordReveal text={title} />{" "}
         {accent ? (
           <em className="font-serif font-normal italic tracking-normal">
-            {accent}
+            <WordReveal text={accent} delay={0.3} />
           </em>
         ) : null}
       </h2>

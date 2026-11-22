@@ -60,10 +60,61 @@ p {
   opacity: 1;
 }
 
+/* Marquee strip — continuous motion, pure CSS. The track holds two
+   identical copies of the row, so translating -50% loops seamlessly. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Hero scroll cue — a slow, obvious bounce so a phone user sees at a
+   glance that the page scrolls. */
+@keyframes scroll-cue {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.45;
+  }
+}
+
+.scroll-cue {
+  animation: scroll-cue 1.6s ease-in-out infinite;
+}
+
 /* Lenis smooth-scroll recommended base styles */
 html.lenis,
 html.lenis body {
   height: auto;
+}
+
+/* prefers-reduced-motion: every continuous / entrance animation stops.
+   GSAP components check this in JS too and skip their tweens, leaving
+   content fully visible. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .scroll-cue {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 .lenis.lenis-smooth {
