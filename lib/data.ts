@@ -1,8 +1,12 @@
 // Single source of truth for portfolio content.
-// Sourced from Haris Sandi Purna Yudha's public LinkedIn profile
-// (id.linkedin.com/in/harisforwork, checked 22 Nov 2026).
-// Skills, Languages, full contact info and any certifications beyond the
-// 10 listed were not visible without sign-in and are NOT included here.
+// WARNING: the public LinkedIn scrape (id.linkedin.com/in/harisforwork,
+// 22 Nov 2026) turned out to be wrong / mixed with another profile:
+// it listed 8 experience roles, PINGA Studio, and Bangkit Academy.
+// Haris corrected it 22 Nov 2026 with a screenshot of his real
+// logged-in LinkedIn Experience: only TWO roles, listed below.
+// Bangkit Academy is removed entirely — Haris never joined it.
+// Projects, certifications and awards below are still from that
+// public scrape and are UNVERIFIED until Haris confirms them.
 // Email is masked on LinkedIn and is never published.
 
 export const profile = {
@@ -12,8 +16,7 @@ export const profile = {
   headlineAccent: "Driven to Solve Real Problems Through Thoughtful Design",
   location: "Indonesia",
   connections: 190,
-  current:
-    "Student at Universitas Teknologi Digital Indonesia · Fullstack Developer at PINGA Studio",
+  current: "Student at Universitas Teknologi Digital Indonesia",
   linkedin: "https://www.linkedin.com/in/harisforwork",
   linktree: "https://linktr.ee/harispy",
   github: "https://github.com/saaandbite",
@@ -35,67 +38,19 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     role: "Fullstack Developer",
-    org: "PINGA Studio",
-    type: "Full-time",
-    period: "Jun 2025 — Present",
-    location: "Yogyakarta · Hybrid",
-    current: true,
+    org: "Balai Diklat Industri Yogyakarta",
+    type: "Internship",
+    period: "Sep 2025 — May 2026 · 9 mos",
+    location: "Yogyakarta, Indonesia · Hybrid",
   },
   {
     role: "Data Entry Specialist",
-    org: "2Captcha",
+    org: "2captcha",
     type: "Part-time",
-    period: "Jan 2025 — Present",
+    period: "Sep 2020 — Sep 2024 · 4 yrs 1 mo",
     location: "Remote",
-    detail: "Accurate, detail-focused data processing under strict quality guidelines.",
-    current: true,
-  },
-  {
-    role: "UI/UX Designer",
-    org: "Komunitas Teknologi Informasi UTDI",
-    type: "Part-time",
-    period: "Sep 2024 — Present",
-    location: "Yogyakarta · On-site",
-    current: true,
-  },
-  {
-    role: "UI/UX Designer",
-    org: "HMPSI Universitas PGRI Yogyakarta",
-    type: "Part-time",
-    period: "Jan 2025 — Jun 2025",
-    location: "Yogyakarta · On-site",
-  },
-  {
-    role: "Full Stack Developer",
-    org: "HMPSI Universitas PGRI Yogyakarta",
-    type: "Internship",
-    period: "Dec 2024 — Feb 2025",
-    location: "Hybrid",
-    detail: "Built the HMPSI UKM attendance management website, full lifecycle.",
-  },
-  {
-    role: "Web Developer",
-    org: "HMIF UTDI",
-    type: "Internship",
-    period: "Jun 2024 — Aug 2024",
-    location: "Hybrid",
-    detail: "Built the official HMIF UTDI website, full lifecycle.",
-  },
-  {
-    role: "UI/UX Designer",
-    org: "Himpunan Mahasiswa Informatika UTDI",
-    type: "Part-time",
-    period: "May 2024 — Dec 2024",
-    location: "Yogyakarta · On-site",
-  },
-  {
-    role: "UI/UX Design and Web Development",
-    org: "Bangkit Academy 2024 by Google, GoTo, and Traveloka",
-    type: "Internship",
-    period: "Feb 2024 — Jul 2024",
-    location: "Hybrid",
     detail:
-      "Cloud Computing path: Google Cloud, deploying ML models, websites, REST APIs. Capstone in a team of 5–6.",
+      "Data Verification & Entry: Performed high-accuracy visual and alphanumeric data verification and entry under strict quality standards. Skills: Entri Data, Data Annotation.",
   },
 ];
 
@@ -165,11 +120,6 @@ export const education = [
     school: "Universitas Teknologi Digital Indonesia",
     degree: "Bachelor, Informatics",
     period: "2023 — 2027",
-  },
-  {
-    school: "Bangkit Academy led by Google, GoTo, & Traveloka",
-    degree: "Cloud Computing",
-    period: "Feb — Jul 2024",
   },
 ];
 

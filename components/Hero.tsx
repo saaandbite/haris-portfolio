@@ -6,7 +6,7 @@ import { AnimatedNumber } from "./motion/AnimatedNumber";
 import { ScrambleText } from "./motion/ScrambleText";
 
 const stats = [
-  { value: 8, label: "Experience roles" },
+  { value: 2, label: "Experience roles" },
   { value: 6, label: "Selected projects" },
   { value: 10, label: "Dicoding certifications" },
   { value: 2, label: "Hackathon 1st places" },
