@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Industrial Clean base (ui-ux-anti-slop): #FAFAFA bg, #09090B ink,
+   #71717A muted, Emerald #10B981 accent. No purple-blue anywhere. */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fafafa;
+  color: #09090b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+::selection {
+  background: #10b981;
+  color: #fff;
+}
+
+/* tabular-nums on every number, balance on headings, pretty on prose */
+h1,
+h2 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.font-mono,
+[tabular-nums] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Magic UI Spotlight pattern, driven by TiltCard's --mx/--my vars.
+   The radial highlight is subtle (emerald, 6% alpha) on a white card. */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    320px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(16, 185, 129, 0.08),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* Lenis smooth-scroll recommended base styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
