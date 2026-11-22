@@ -8,7 +8,7 @@ import { ScrambleText } from "./motion/ScrambleText";
 const stats = [
   { value: 2, label: "Experience roles" },
   { value: 6, label: "Selected projects" },
-  { value: 10, label: "Dicoding certifications" },
+  { value: 14, label: "Certifications" },
   { value: 2, label: "Hackathon 1st places" },
 ];
 

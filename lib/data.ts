@@ -5,8 +5,9 @@
 // Haris corrected it 22 Nov 2026 with a screenshot of his real
 // logged-in LinkedIn Experience: only TWO roles, listed below.
 // Bangkit Academy is removed entirely — Haris never joined it.
-// Projects, certifications and awards below are still from that
-// public scrape and are UNVERIFIED until Haris confirms them.
+// Projects and awards below are still from that public scrape and
+// are UNVERIFIED until Haris confirms them. Certifications are now
+// corrected from Haris's screenshots (14 entries, see below).
 // Email is masked on LinkedIn and is never published.
 
 export const profile = {
@@ -123,17 +124,25 @@ export const education = [
   },
 ];
 
+// Real certifications, from Haris's logged-in LinkedIn screenshots,
+// 22 Nov 2026. 14 unique entries. The earlier 10 Dicoding entries from
+// the public scrape were wrong and are removed. Credential IDs are
+// NOT published on the portfolio; they are in Haris's LinkedIn only.
 export const certifications = [
-  { name: "Belajar Dasar Pemrograman JavaScript", issuer: "Dicoding", date: "Nov 2024" },
-  { name: "Belajar Membuat Aplikasi Web dengan React", issuer: "Dicoding", date: "Nov 2024" },
-  { name: "Belajar Membuat Aplikasi Back-End untuk Pemula", issuer: "Dicoding", date: "Nov 2024" },
-  { name: "Belajar Dasar Pemrograman Web", issuer: "Dicoding", date: "Oct 2024" },
-  { name: "Belajar Dasar AI", issuer: "Dicoding", date: "Sep 2024" },
-  { name: "Belajar Dasar Cloud dan Gen AI di AWS", issuer: "Dicoding", date: "Sep 2024" },
-  { name: "Belajar Membuat Front-End Web untuk Pemula", issuer: "Dicoding", date: "Aug 2024" },
-  { name: "Memulai Pemrograman dengan Python", issuer: "Dicoding", date: "Jul 2024" },
-  { name: "Belajar Dasar Git dengan GitHub", issuer: "Dicoding", date: "Jul 2024" },
-  { name: "Belajar Dasar Structured Query Language (SQL)", issuer: "Dicoding", date: "Jul 2024" },
+  { name: "Agile Project Management", issuer: "HP LIFE", date: "Nov 2024" },
+  { name: "Belajar Dasar Manajemen Proyek", issuer: "Dicoding Indonesia", date: "Sep 2024" },
+  { name: "Belajar Dasar Google Cloud", issuer: "Dicoding Indonesia", date: "Aug 2024" },
+  { name: "Build a Secure Google Cloud Network", issuer: "Google Cloud Skills Boost", date: "Jun 2024" },
+  { name: "Implement Cloud Security Fundamentals on Google Cloud", issuer: "Google Cloud Skills Boost", date: "Jun 2024" },
+  { name: "Mitigate Threats and Vulnerabilities with Security Command Center", issuer: "Google Cloud Skills Boost", date: "Jun 2024" },
+  { name: "Secure BigLake Data", issuer: "Google Cloud Skills Boost", date: "Jun 2024" },
+  { name: "Protect Cloud Traffic with BeyondCorp Enterprise (BCE) Security", issuer: "Google Cloud Skills Boost", date: "Jun 2024" },
+  { name: "Configure Service Accounts and IAM Roles for Google Cloud", issuer: "Google Cloud Skills Boost", date: "May 2024" },
+  { name: "Level 1: Security and Compliance", issuer: "Google Cloud Skills Boost", date: "May 2024" },
+  { name: "Google Cloud Computing Foundations: Infrastructure in Google Cloud", issuer: "Google Cloud Skills Boost", date: "May 2024" },
+  { name: "Google Cloud Computing Foundations: Cloud Computing Fundamentals", issuer: "Google Cloud Skills Boost", date: "May 2024" },
+  { name: "Belajar Dasar Structured Query Language (SQL)", issuer: "Dicoding Indonesia", date: "Dec 2023" },
+  { name: "Belajar Dasar Data Science", issuer: "Dicoding Indonesia", date: "Dec 2023" },
 ];
 
 export const awards = [
